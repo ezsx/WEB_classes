@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.accordion-btn {
+    background-color: #222222;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    font-size: 16px;
+}
+
+.accordion-btn:hover {
+    background-color: #141414;
+}
+
+.accordion-content {
+    background-color: white;
+    display: none;
+    padding: 0 18px;
+    overflow: hidden;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.accordion-content.open {
+    display: block;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    border: 2px solid #222222;
+}
+
+button[type=submit] {
+    background-color: #222222;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button[type=submit]:hover {
+    background-color: #141414;
+}
+
+label.framework {
+    display: inline-block;
+    margin: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+.fade-out {
+    animation: fadeOut 1s;
+    opacity: 0;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#image-container {
+    position: relative;
+    /*width: 100%;*/
+    width: 828px;
+    /*it is broken if i set height to 100% i dont now why*/
+    height: 796px;
+    margin-left: -5%;
+    overflow: hidden;
+}
+
+#image-container p {
+    position: absolute;
+    z-index: 0;
+    margin-left: 30%;
+    margin-top: 40%;
+
+}

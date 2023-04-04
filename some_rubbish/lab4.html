@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<div id="black-parallelogram" class="parallelogram"></div>
+<div id="white-parallelogram" class="parallelogram"></div>
+<body>
+
+</body>
+<style>
+  body{
+    background-color: antiquewhite;
+  }
+    .parallelogram {
+        border: black;
+        border-width: 2px!important;
+        width: 100px;
+        height: 70px;
+        position: absolute;
+        transform-origin: top left;
+    }
+
+    #black-parallelogram {
+        background-color: black;
+        transform: skewX(20deg); /* Skew the parallelogram by 20 degrees on the X-axis */
+        z-index: 1; /* Make sure the black parallelogram is behind the white parallelogram */
+    }
+
+    #white-parallelogram {
+        background-color: white;
+        transform: skewX(20deg) translateX(50px); /* Skew the parallelogram by -20 degrees on the X-axis and translate it 50px to the right */
+        z-index: 2; /* Make sure the white parallelogram is in front of the black parallelogram */
+        top: 50px;
+    }
+</style>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Battery Example</title>
+    <style>
+        /* Container Styles */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        /* Battery Styles */
+        .battery {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+            width: 80%;
+            height: 50px;
+            border-radius: 25px;
+            border: 2px solid black;
+            padding-left: 20px;
+        }
+        .battery:before {
+            content: '';
+            position: absolute;
+            left: -13px;
+            top: 12px;
+            width: 10px;
+            height: 25px;
+            background-color: #ddd;
+            border-radius: 6px 0 0 6px;
+        }
+        .battery-level {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            border-radius: 25px;
+            background-color: #00FF00;
+            transition: width 0.5s ease-in-out;
+        }
+        .battery-level-text {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+        /* Battery Level Styles */
+        .battery-level-25 {
+            width: 25%;
+            background-color: #FF0000;
+        }
+        .battery-level-50 {
+            width: 50%;
+            background-color: #FFA500;
+        }
+        .battery-level-75 {
+            width: 75%;
+            background-color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="battery">
+        <div class="battery-level battery-level-25"></div>
+        <div class="battery-level-text">25%</div>
+    </div>
+    <div class="battery">
+        <div class="battery-level battery-level-50"></div>
+        <div class="battery-level-text">50%</div>
+    </div>
+    <div class="battery">
+        <div class="battery-level battery-level-75"></div>
+        <div class="battery-level-text">75%</div>
+    </div>
+</div>
+</body>
+</html>
