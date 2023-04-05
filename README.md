@@ -10,3 +10,7 @@
   * accord.css (all css, for hidden and not hidden elements too)
   * main_index.html (all tasks in div blocks)
 # ![alt text](all_js_tasks_1-10/src/app_example.png)
+
+## implemented flex site
+
+# ![alt text](all_js_tasks_1-10/src/flex_site.png)

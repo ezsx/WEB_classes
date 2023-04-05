@@ -1,0 +1,310 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-size: 16px;
+}
+body{
+  box-sizing: border-box;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.flex{
+  display: flex;
+}
+
+.blue{
+  color: #3f96e8 !important;
+}
+
+.button{
+  display: block;
+  padding: 20px 54px !important;
+  border: 2px solid #3f96e8 !important;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #3f96e8;
+  font-size: 1.5rem;
+  margin-top: 35px;
+  text-align: center;
+}
+
+h1{
+  font-size: 4.5rem;
+  text-align: center;
+}
+h2{
+  font-size: 1.5rem;
+}
+p{
+  font-size: 1.25rem;
+  text-wrap: normal;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+.bg-gray{
+  background-color: #f2f2f2!important;
+}
+section{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0 30px 0;
+}
+section:first-child{
+  background-image: linear-gradient(to right, #aed3f6, white)
+}
+
+.container{
+  margin: 0 auto;
+  display: flex;
+  max-width: 1080px;
+  justify-content: center;
+}
+
+.text{
+  padding: 60px;
+}
+
+.text-right{
+  text-align: left!important;
+}
+
+.card{
+  display: flex;
+  font-weight: 400;
+  color: #111111;
+  max-width: 550px;
+  padding: 0 30px;
+}
+.card>div{
+  flex-basis: 50%;
+}
+.card-col{
+  display: flex;
+  max-width: 550px;
+  flex-direction: column;
+  padding: 25px 30px 20px 30px;
+  font-weight: 400;
+  color: #111111;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  height: 100%;
+}
+.card-col .img-round{
+  width: 180px!important;
+  margin: 8px auto 0;
+}
+.card-col a{
+  color: #111111;
+  font-size: 1rem;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  border-bottom: 1.5px solid #111111;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.card img{
+  width: 220px;
+  height: 308px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.card div{
+  margin: 0 15px;
+}
+.card-blue{
+  padding: 30px;
+  color: white;
+  background-color: rgba(63, 150, 232, 1);
+}
+
+.grid-te{
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 65px;
+}
+.img-round{
+  border-radius: 50%;
+}
+.row{
+  display: flex;
+
+}
+
+.grid-form{
+  margin-top: 30px;
+  width: 100%;
+  display: grid;
+  grid-template:
+          "a b c" 45px
+          "d d d" 120px / 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+form{
+  width: 866px;
+  background-color: #fff;
+  padding: 30px;
+}
+label{
+  width: 100%;
+}
+input{
+  background-color: #e5e5e5;
+  border: 0;
+  outline: 0;
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+nav{
+  transition: 1s ease-in-out all;
+  position: fixed;
+  display: none;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+nav button{
+  width: 30px;
+  height: 30px;
+  margin: 20px 20px 0 auto;
+  background: 0;
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav button::before{
+  color: white;
+  content: "\2715";
+  font-size: 28px !important;
+}
+
+
+.nav-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+  opacity: .99;
+  flex-basis: 20%;
+  font-size: 2rem;
+}
+.nav-inner a{
+  color: white!important;
+  text-decoration: none;
+  margin: 20px 0 0 0;
+  text-align: center;
+
+}
+.nav-overlay{
+  width: 100%;
+  background-color: #000000;
+  opacity: .7;
+}
+.btn-open{
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  width: 30px;
+  height: 30px;
+  background: 0;
+  border: 0;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.btn-open div{
+  width: 30px;
+  border: 2px solid black;
+}
+
+.page-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  top: 0;
+  padding: 0;
+  height: 95vh;
+}
+
+
+#btn-up {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#btn-up:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+
+
+
+@media (max-width: 991px) {
+  .container{
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container:first-child{
+    flex-direction: column-reverse;
+  }
+  .container:first-child img{
+    width: 100%;
+    height: auto!important;
+    background-size: 50%;
+  }
+  .grid-te{
+    grid-template-columns: 1fr;
+  }
+  .card-col{
+    margin: 20px 0;
+  }
+  .grid-form{
+    grid-template-areas: 'a a a' 'b b b' 'c c c ' 'd d d';
+    grid-template-rows: 1fr 1fr 1fr 4fr;
+  }
+  .page-section{
+    flex-direction: column;
+  }
+  .page-section img{
+    max-height: 80%;
+  }
+
+
+
+}
+
